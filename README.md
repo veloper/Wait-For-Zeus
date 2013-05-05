@@ -63,7 +63,7 @@ ACTIONS: [R]estart Zeus, [K]ill Zeus, [c]ontinue? [RKc]: _
     * **However**, the script will not operate as expected if one decides to switch between Rails projects (within the same tab/session) and calls `./wait_for_zeus.sh` multiple times.
 
 ## Author
-* Daniel Doezema
+* [Daniel Doezema](http://dan.doezema.com)
 
 ## Licence & Copyright
 * New BSD License
