@@ -13,13 +13,11 @@ Loading Zeus Processes .............................
 boot
 └── default_bundle
  ├── test_environment
- │  ├── cucumber_environment
  │  └── test_helper
  └── development_environment
   └── prerake
 
 Available Commands: [waiting] [crashed] [ready]
-zeus cucumber [run to see backtrace]
 zeus test (alias: rspec, testrb)
 zeus console (alias: c)
 zeus runner (alias: r)
