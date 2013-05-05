@@ -29,7 +29,7 @@ zeus server (alias: s)
 zeus generate (alias: g)
 zeus rake
 
-$ \_
+$ _
 ```
 
 Running the script when an instance of Zeus exists within the current `tty` should prompt the user for actions...
