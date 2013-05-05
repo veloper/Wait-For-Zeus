@@ -59,7 +59,7 @@ ACTIONS: [R]estart Zeus, [K]ill Zeus, [c]ontinue? [RKc]: _
 
 ## Warnings & Limitations
 * The script was developed over a weekend and is largely untested.
-* All process parsing is scoped through the current `tty`, which should be fine so long as each app has a seperate termianl tab. *However*, if one decides to switch between apps, within the same tab/session, and calls `./wait_for_zeus.sh` for each one then script will not operate as expected.
+* All process parsing is scoped through the current `tty`, which should be fine so long as each app has a seperate terminal tab.    * **However**, the script will not operate as expected if one decides to switch between Rails projects (within the same tab/session) and calls `./wait_for_zeus.sh` multiple times.
 
 ## Author
 * Daniel Doezema
