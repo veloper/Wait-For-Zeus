@@ -2,7 +2,9 @@
 Starts the Zeus gem in the background and waits (blocks) until all of its sub-processes have loaded.
 
 ## Usage
-When the script is first called within a Rails project it wil start zeus in a background job and redirect its output to the `$HOME/zeus.meta/ttysXXX/output.log` file. After all of the sub processes have been loaded the last output of Zeus will be echoed to `STDOUT`. These actions and events are shown below...
+When the script is first called within a Rails project it will call `zeus start` in a background job and redirect all output to the `$HOME/zeus.meta/ttysXXX/output.log` file. After all of the sub processes have been loaded the last output of Zeus will be `echo`ed to `STDOUT`. 
+
+These actions and events are shown below...
 
 ```bash
 $ ./wait_for_zeus.sh 
