@@ -2,7 +2,7 @@
 Starts the Zeus gem in the background and waits (blocks) until all of its sub-processes have loaded.
 
 ## Usage
-This script can be simply called like so
+When the script is first called within a Rails project it wil start zeus in a background job and redirect its output to the `$HOME/zeus.meta/ttysXXX/output.log` file. After all of the sub processes have been loaded the last output of Zeus will be echoed to `STDOUT`. These actions and events are shown below...
 
 ```bash
 $ ./wait_for_zeus.sh 
@@ -27,7 +27,7 @@ zeus server (alias: s)
 zeus generate (alias: g)
 zeus rake
 
-$
+$ _
 ```
 
 Running the script when an instance of Zeus exists within the current `tty` should prompt the user for actions...
@@ -52,9 +52,12 @@ zeus server (alias: s)
 zeus generate (alias: g)
 zeus rake
 
-ACTIONS: [R]estart Zeus, [K]ill Zeus, [c]ontinue? [RKc]: 
-
+ACTIONS: [R]estart Zeus, [K]ill Zeus, [c]ontinue? [RKc]: _
 ```
+
+## Warnings & Limitations
+* The script was developed over a weekend and is largely untested.
+* All process parsing is scoped through the current `tty`, which should be fine so long as each app has a seperate termianl tab. *However*, if one decides to switch between apps, within the same tab/session, and calls `./wait_for_zeus.sh` for each one then script will not operate as expected.
 
 ## Author
 * Daniel Doezema
